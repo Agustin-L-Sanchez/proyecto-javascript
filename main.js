@@ -1,37 +1,35 @@
-let contador = 0;
+
+const ListaDeUsariosingresados = []
+let usuario;
 
 do {
-    contador++
+    let NombreDeUsuario = prompt("Ingresar un nombre");
+    ListaDeUsariosingresados.push(NombreDeUsuario.toUpperCase());
+    let ApellidoDeUsuario = prompt("Ingresar un apellido");
+    ListaDeUsariosingresados.push(ApellidoDeUsuario.toUpperCase());
+    let EdadDeUsuario = prompt("indica tu edad");
+    ListaDeUsariosingresados.push(EdadDeUsuario.toUpperCase());
+    let ticket = prompt("Tienes ticket?");
+    ListaDeUsariosingresados.push(ticket.toUpperCase());
+    console.log(ListaDeUsariosingresados)
 
-    let NombreDelUsuario = prompt("Ingrese nombre");
-    let ApellidoDelUsuario = prompt("Ingresar tu apellido")
-    let PaisDeUsuario = prompt("ingrese el pais de origen");
-    let EdadDeUsuario = parseInt(prompt("ingrese la edad del usuario"));
-    let Ticket = prompt("comprobar si el usuario tiene un ticket");
-
-
-    let usuario = {
+    usuario = {
         nombre: "agustin",
         apellido: "sanchez",
         edad: 19,
-        pais: "argentina",
-        ticket: false,
-    };
+        ticket: true,
+    }
+
 
 
     if (usuario.edad > 18) {
-
-        if (usuario.ticket) {
-            console.log("El usuario es mayor de edad y tiene un ticket");
-        } else {
-            console.log("El usuario es mayor de edad, pero no tiene un ticket");
+        alert("INGRESO CON EXITO ! El usuario es mayor de edad y tiene un ticket")
+        if (usuario.ticket === false) {
+            alert("El usuario es mayor de edad pero no tiene un ticket")
         }
-
-    } else {
-        alert("El usuario es menor de edad");
-
     }
-
-} while (contador <= 1)
-
+    else {
+        alert("El usuario es menor de edad")
+    }
+} while (ListaDeUsariosingresados);
 
