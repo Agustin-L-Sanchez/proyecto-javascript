@@ -4,12 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    <h1>Primer dia usando java script :D </h1>
+    
+    <main>
+       
+    
+        <h1>Tienda Online</h1>
+    
+        
+        <div class="productos">
+            <div class="producto">
+               <img src="./imagenes/anillo.jpg.JPG" alt="">
+                <h2>Anillo infanteria oro 18k</h2>
+                <p>Precio: $10.00</p>
+                <button class="agregar-carrito" data-nombre="Anillo infanteria oro" data-precio="10.00">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./imagenes/calavera empabonada 2.JPG" alt="Producto 2">
+                <h2>Anillo Calavera palta 925</h2>
+                <p>Precio: $15.00</p>
+                <button class="agregar-carrito" data-nombre="Anillo calavera" data-precio="15.00">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./imagenes/A-242 (1).JPG" alt="Producto 2">
+                <h2>Anillo medio sin fin</h2>
+                <p>Precio: $15.00</p>
+                <button class="agregar-carrito" data-nombre="Anillo medio sin fin" data-precio="15.00">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./imagenes/anillo roseta oro - copia.JPG" alt="Producto 2">
+                <h2>Anillo roseta</h2>
+                <p>Precio: $15.00</p>
+                <button class="agregar-carrito" data-nombre="Anillo Roseta" data-precio="15.00">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./imagenes/sello nico.JPG" alt="Producto 2">
+                <h2>Anillo sello con inicial</h2>
+                <p>Precio: $15.00</p>
+                <button class="agregar-carrito" data-nombre="Anillo sello inicial" data-precio="15.00">Agregar al carrito</button>
+            </div>
+        </div>
+    
+        <div class="contenedor-carrito-compras">
+        <div class="carrito">
+            <h2>Carrito de compras</h2>
+            <ul id="lista-carrito">
+            </ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button id="btn-reiniciar">Vaciar Carrito</button>
+            <button id="btn-comprar">Comprar</button>
+        </div>
+    </div>
     
     
     
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
