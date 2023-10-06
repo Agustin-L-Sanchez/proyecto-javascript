@@ -39,16 +39,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function comprarCarrito() {
         if (carrito.length === 0) {
-            alert("El carrito está vacío. Agrega productos antes de comprar.");
+            Swal.fire({
+                title: 'Tu carrito esta vacio!',
+                text: 'Por favor agrega productos para continuar con la compra',
+                icon: 'Error',
+                confirmButtonText: 'Continuar'
+            })
+            ;
         } else {
-            alert("Compra realizada con éxito. Gracias por tu compra.");
+            Swal.fire({
+                title: 'Gracias por tu compra!',
+                text: 'Gracias por elegirnos',
+                icon: 'success',
+                confirmButtonText: 'Continuar'
+            })
+            ;
             reiniciarCarrito();
         }
-    }
+    
+   
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (carrito.length <= 1) {
+                reject(new Error('El carrito está vacío.'));
+            } else {
+                reiniciarCarrito();
+                resolve('Compra completada.');
+            }
+        }, 1000);
+    });
+
+   
+   
+ }
+
+
+    comprarCarrito()
+    .then((mensaje) => {
+
+    })
+    .catch((error) => {
+        console.error(error.message);
+    });
+
+
+
 
 
     function guardarCarrito() {
         localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    
     }
 
 
